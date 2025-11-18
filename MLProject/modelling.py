@@ -35,6 +35,8 @@ with mlflow.start_run(run_name="rf_baseline"):
     y_pred = model.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
 
-    mlflow.log_metric("accuracy_manual", acc)
+    mlflow.log_param("n_estimators", args.n_estimators)
+    mlflow.log_metric("accuracy", acc)
+
 
 print("Selesai training baseline, cek MLflow UI untuk melihat run.")
