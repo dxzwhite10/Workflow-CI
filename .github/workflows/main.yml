@@ -1,4 +1,4 @@
-name: CI
+name: CI_1.1
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  CSV_URL: "MLProject/namadataset_preprocessing/train_student.csv"
+  CSV_URL: "MLProject/namadataset_preprocessing/train_df.csv"
 
 jobs:
   build:
