@@ -2,6 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+import os
 import mlflow
 import mlflow.sklearn
 
@@ -38,5 +39,7 @@ with mlflow.start_run(run_name="rf_baseline"):
     mlflow.log_param("n_estimators", args.n_estimators)
     mlflow.log_metric("accuracy", acc)
 
+    os.makedirs("artifacts", exist_ok=True)
+    mlflow.sklearn.save_model(model, "artifacts/model")
 
 print("Selesai training baseline, cek MLflow UI untuk melihat run.")
