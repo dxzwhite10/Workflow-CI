@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  CSV_URL: "https://raw.githubusercontent.com/dxzwhite10/Workflow-CI/main/MLProject/train_df.csv"
+  CSV_URL: "https://raw.githubusercontent.com/dxzwhite10/Workflow-CI/refs/heads/main/MLProject/namadataset_preprocessing/train_df.csv"
 
 jobs:
   build:
