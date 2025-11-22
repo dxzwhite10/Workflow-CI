@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  CSV_URL: "MLProject/namadataset_preprocessing/train_df.csv"
+  CSV_URL: "https://raw.githubusercontent.com/<USERNAME>/<NAMA_REPO>/main/MLProject/train_df.csv""
 
 jobs:
   build:
