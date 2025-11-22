@@ -35,14 +35,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install mlflow scikit-learn pandas
 
-      # Jalankan MLflow Project
-      - name: Run MLflow project
-        run: |
-          mlflow run MLProject --env-manager=local
-
-      # Ambil latest MLflow run_id
-      - name: Get latest MLflow run_id
-        run: |
-          latest_run=$(ls -td mlruns/0/* | head -1 | xargs -n1 basename)
-          echo "Latest run_id: $latest_run"
-          echo "run_id=$latest_run" >> $GITHUB_ENV
+    
