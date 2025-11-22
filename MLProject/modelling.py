@@ -15,7 +15,7 @@ mlflow.sklearn.autolog()
 
 # ---------- 2. Load data ter-preprocess ----------
 
-df = pd.read_csv("MLProject/namadataset_preprocessing/train_df.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/dxzwhite10/Workflow-CI/main/MLProject/train_df.csv")
 X = df.drop("diagnosed_diabetes", axis=1)
 y = df["diagnosed_diabetes"]
 
